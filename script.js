@@ -1,3 +1,5 @@
+//ordinary colors
+
 const ordinaryColorButton = document.querySelector('#colorbutton');
 
 function getRandomColorName() {
@@ -11,6 +13,8 @@ function getRandomColorName() {
 ordinaryColorButton.addEventListener('click', () =>document.body.style.backgroundColor = getRandomColorName());
     
 
+
+//RGB color
 const rgbColorButton = document.querySelector('#rgbutton');
 
 function getRandomRgbColor () {
@@ -18,9 +22,27 @@ const red =  Math.floor(Math.random() * 256);
 const green = Math.floor(Math.random() * 256);
 const blue = Math.floor(Math.random() * 256);
 
-console.log(`rgb ${red}, ${green}, ${blue} `);
+const rgbColor = `rgb(${red}, ${green}, ${blue})`;
+
+console.log(rgbColor);
+
+return rgbColor;
+
 }
-  
+
+rgbColorButton.addEventListener('click', () => {
+  document.body.style.backgroundColor = getRandomRgbColor();
+});  
+
+
+
+//HEX colors
+
+const hexColorButton = document.querySelector('#hex-button');
+
+function getRandomHexColor () {
+
+}
 
 
 
@@ -41,19 +63,4 @@ console.log(`rgb ${red}, ${green}, ${blue} `);
 
 
 
-
-//   //rgb button
-//   const rgbButton = document.getElementById('rgb-button');
-// if (rgbButton) {
-//   rgbButton.addEventListener('click', function() {
-//     document.body.style.backgroundColor = getRandomRgbColor();
-//   });
-// }
-
-// function getRandomRgbColor() {
-//     const r = Math.floor(Math.random() * 256);
-//     const g = Math.floor(Math.random() * 256);
-//     const b = Math.floor(Math.random() * 256);
-//     return `rgb(${r}, ${g}, ${b})`;
-//   }
 
